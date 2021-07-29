@@ -1,0 +1,27 @@
+<main class="main-content dt-sl mb-3">
+    <div class="container main-container">
+        <div class="row">
+            <div class="col-12 mb-2 px-0">
+@* /////////////////////////////////////////////////////////////////////////////////////////////////////////// *@
+                <fieldset class="mt-5 mb-5 ">
+                    <div class="text-center container">
+                        @{
+                            if (ViewBag.msg == "success")
+                            {
+                                <p class="alert alert-success font-weight-bolder"> پرداخت با موفقیت انجام شد. </p>
+                                <a class="btn btn-danger" href="/home/index"> بازگشت </a>
+                            }
+                            if (ViewBag.msg == "error")
+                            {
+                                <p class="alert alert-danger font-weight-bolder"> خطا در پرداخت </p>
+                                <a class="btn btn-danger" href="/order/index"> بازگشت </a>
+                            }
+                        }
+                    </div> 
+                </fieldset>
+@* ///////////////////////////////////////////////////////////////////////////////////////////////////////// *@
+            </div>
+        </div>
+    </div>
+</main>
+ 

@@ -1,0 +1,37 @@
+       <section id="main-slider" class="main-slider carousel slide carousel-fade card hidden-sm"
+                            data-ride="carousel">
+                            @* <ol class="carousel-indicators">
+                                <li data-target="#main-slider" data-slide-to="0" class="active"></li>
+                                <li data-target="#main-slider" data-slide-to="1" ></li>
+                                <li data-target="#main-slider" data-slide-to="2"></li>
+                                <li data-target="#main-slider" data-slide-to="3"></li>
+                                <li data-target="#main-slider" data-slide-to="4"></li>
+                                <li data-target="#main-slider" data-slide-to="5"></li>
+                                <li data-target="#main-slider" data-slide-to="6"></li>
+                            </ol>
+             *@
+                            <div class="carousel-inner">
+
+                 
+                          @if ( ViewBag.qslider != null)
+                        {
+                        @foreach (var item in ViewBag.qslider)
+                        {
+    <div class="carousel-item active">
+                                    <a class="main-slider-slide" href="#"
+                                        style="background-image: url(../fileupload/@item.ImageMainSlid)">
+                                    </a>
+                                </div>
+                        }
+                        }
+                            </div>
+         
+                            <a class="carousel-control-prev" href="#main-slider" role="button" data-slide="prev">
+                                <i class="mdi mdi-chevron-right"></i>
+                            </a>
+                            <a class="carousel-control-next" href="#main-slider" data-slide="next">
+                                <i class="mdi mdi-chevron-left"></i>
+                            </a>
+                    
+                            
+                        </section>
